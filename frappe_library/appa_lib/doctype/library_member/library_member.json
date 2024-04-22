@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "Name:",
  "creation": "2024-04-22 15:50:59.979238",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -23,13 +24,15 @@
   {
    "fieldname": "last_name",
    "fieldtype": "Data",
-   "label": "Last Name"
+   "label": "Last Name",
+   "unique": 1
   },
   {
    "fieldname": "full_name",
    "fieldtype": "Data",
    "label": "Full Name",
-   "read_only": 1
+   "read_only": 1,
+   "unique": 1
   },
   {
    "fieldname": "email_address",
@@ -48,10 +51,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-22 15:54:14.776306",
+ "modified": "2024-04-22 16:44:25.157368",
  "modified_by": "Administrator",
  "module": "Appa Lib",
  "name": "Library Member",
+ "naming_rule": "Set by user",
  "owner": "Administrator",
  "permissions": [
   {
