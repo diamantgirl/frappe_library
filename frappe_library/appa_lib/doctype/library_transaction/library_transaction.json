@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:LT.######",
+ "autoname": "LT.#####",
  "creation": "2024-04-22 16:59:24.251561",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -64,7 +64,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-04-22 17:05:24.861372",
+ "modified": "2024-04-23 17:48:48.255254",
  "modified_by": "Administrator",
  "module": "Appa Lib",
  "name": "Library Transaction",
