@@ -6,17 +6,17 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_wvit",
   "song_number",
   "kshetram",
+  "section_break_wvit",
+  "madani_index",
   "ragam_notes_1",
   "ragam_notes_2",
-  "lyrics",
+  "synopsis",
   "column_break_qtxq",
-  "madani_index",
   "website_index",
   "thalam_info",
-  "synopsis",
+  "section_break_cqpo",
   "rich_lyrics"
  ],
  "fields": [
@@ -47,11 +47,6 @@
    "label": "Ragam Notes 2"
   },
   {
-   "fieldname": "lyrics",
-   "fieldtype": "Markdown Editor",
-   "label": "Lyrics"
-  },
-  {
    "fieldname": "column_break_qtxq",
    "fieldtype": "Column Break"
   },
@@ -79,14 +74,19 @@
    "unique": 1
   },
   {
+   "default": " ",
    "fieldname": "rich_lyrics",
    "fieldtype": "Text Editor",
    "label": "Rich Lyrics"
+  },
+  {
+   "fieldname": "section_break_cqpo",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-08 16:13:54.383827",
+ "modified": "2024-05-08 18:03:26.909528",
  "modified_by": "Administrator",
  "module": "Appa Lib",
  "name": "Song",
