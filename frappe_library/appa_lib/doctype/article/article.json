@@ -68,6 +68,7 @@
   {
    "fieldname": "route",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Route"
   },
   {
@@ -82,7 +83,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2024-05-04 11:29:47.320769",
+ "modified": "2024-05-08 15:29:20.172636",
  "modified_by": "Administrator",
  "module": "Appa Lib",
  "name": "Article",
