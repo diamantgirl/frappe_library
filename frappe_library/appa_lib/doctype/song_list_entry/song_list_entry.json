@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-09 12:37:07.634422",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_kztv",
+  "song",
+  "number",
+  "madani_index"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_kztv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 7,
+   "fieldname": "song",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Song",
+   "options": "Song",
+   "print_width": "500px"
+  },
+  {
+   "columns": 2,
+   "fetch_from": "song.song_number",
+   "fieldname": "number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Number",
+   "print_width": "50px",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "song.madani_index",
+   "fieldname": "madani_index",
+   "fieldtype": "Int",
+   "label": "Madani Index",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-05-09 23:03:09.561521",
+ "modified_by": "Administrator",
+ "module": "Appa Lib",
+ "name": "Song List Entry",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
