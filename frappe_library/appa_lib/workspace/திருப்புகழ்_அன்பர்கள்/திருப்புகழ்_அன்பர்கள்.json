@@ -1,0 +1,94 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"FLPFQqg67b\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">\u0ba4\u0bbf\u0bb0\u0bc1\u0baa\u0bcd\u0baa\u0bc1\u0b95\u0bb4\u0bcd \u0b85\u0ba9\u0bcd\u0baa\u0bb0\u0bcd\u0b95\u0bb3\u0bcd</span>\",\"col\":12}},{\"id\":\"j6na_m8UhM\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Bhajans\",\"col\":4}},{\"id\":\"Uy5gGNG36g\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Songs\",\"col\":4}},{\"id\":\"XViA2fiz9I\",\"type\":\"card\",\"data\":{\"card_name\":\"Manage\",\"col\":3}}]",
+ "creation": "2024-05-10 21:06:48.572747",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "heart",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "\u0ba4\u0bbf\u0bb0\u0bc1\u0baa\u0bcd\u0baa\u0bc1\u0b95\u0bb4\u0bcd \u0b85\u0ba9\u0bcd\u0baa\u0bb0\u0bcd\u0b95\u0bb3\u0bcd",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Song",
+   "link_count": 0,
+   "link_to": "Song",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Bhajan",
+   "link_count": 0,
+   "link_to": "Thiruppugazh Anbargal Bhajan",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Manage",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Songs",
+   "link_count": 0,
+   "link_to": "Song",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Bhajans",
+   "link_count": 0,
+   "link_to": "Thiruppugazh Anbargal Bhajan",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-05-10 21:20:30.499763",
+ "modified_by": "Administrator",
+ "module": "Appa Lib",
+ "name": "\u0ba4\u0bbf\u0bb0\u0bc1\u0baa\u0bcd\u0baa\u0bc1\u0b95\u0bb4\u0bcd \u0b85\u0ba9\u0bcd\u0baa\u0bb0\u0bcd\u0b95\u0bb3\u0bcd",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Thiruppugazh Anbargal Bhajan",
+   "label": "Bhajans",
+   "quick_list_filter": "[]"
+  },
+  {
+   "document_type": "Song",
+   "label": "Songs",
+   "quick_list_filter": "[]"
+  }
+ ],
+ "roles": [
+  {
+   "role": "All"
+  }
+ ],
+ "sequence_id": 1.0,
+ "shortcuts": [],
+ "title": "\u0ba4\u0bbf\u0bb0\u0bc1\u0baa\u0bcd\u0baa\u0bc1\u0b95\u0bb4\u0bcd \u0b85\u0ba9\u0bcd\u0baa\u0bb0\u0bcd\u0b95\u0bb3\u0bcd"
+}
