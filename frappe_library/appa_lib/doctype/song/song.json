@@ -8,6 +8,8 @@
  "field_order": [
   "song_number",
   "kshetram",
+  "column_break_ysft",
+  "video_link_youtube",
   "section_break_wvit",
   "madani_index",
   "ragam_notes_1",
@@ -86,11 +88,22 @@
   {
    "fieldname": "section_break_cqpo",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ysft",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "video_link_youtube",
+   "fieldtype": "Data",
+   "label": "Video link (youtube)",
+   "options": "URL",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-11 18:59:10.813427",
+ "modified": "2024-06-12 23:05:35.960669",
  "modified_by": "Administrator",
  "module": "Appa Lib",
  "name": "Song",
