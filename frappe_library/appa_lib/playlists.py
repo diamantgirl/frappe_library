@@ -3,6 +3,7 @@ import json
 from urllib.parse import urlparse, parse_qs
 import google.oauth2.credentials
 import googleapiclient.discovery
+from googleapiclient.errors import HttpError
 
 scopes = [
     "https://www.googleapis.com/auth/userinfo.profile",
@@ -79,8 +80,14 @@ def insert_videos(youtube, playlist_id):
 
 
 def delete(youtube, playlist_id):
-    request = youtube.playlists().delete(id=playlist_id)
-    return request.execute()
+    try:
+        request = youtube.playlists().delete(id=playlist_id)
+        response = request.execute()
+    except HttpError as e:
+        print(f"Error deleting playlist {playlist_id}: {e}")
+        return {}
+    else:
+        return response
 
 
 def get_api_client():
@@ -89,7 +96,8 @@ def get_api_client():
     token = {}
     token_str = os.getenv("API_TOKEN_JSON")
     if token_str:
-        token = eval(token_str)
+        print("Using token from Environment...")
+        token = json.loads(token_str)
     else:
         import credentials
 

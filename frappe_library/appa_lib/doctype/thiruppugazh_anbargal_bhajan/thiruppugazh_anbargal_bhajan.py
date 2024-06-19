@@ -22,35 +22,39 @@ class ThiruppugazhAnbargalBhajan(Document):
             1 + int(state * step),
             title="Updating Playlist",
             description="Creating empty playlist...",
-            doctype=self.doctype,
-            docname=self.name,
+            # doctype=self.doctype,
+            # docname=self.name,
         )
+        time.sleep(1)
         if self.link_to_playlist:
             print(f"Found existing playlist: {self.link_to_playlist}")
             query = urlparse(self.link_to_playlist).query
-            playlist_id = parse_qs(query).get("list")
-            if playlist_id:
+            playlist_ids = parse_qs(query).get("list")
+            if playlist_ids and len(playlist_ids) > 0:
                 try:
-                    playlists.delete(youtube, playlist_id)
+                    print(f"Attempt to delete: {playlist_ids[0]}")
+                    playlists.delete(youtube, playlist_ids[0])
                     print("Successfully deleted!")
-                except:
+                except Exception as e:
                     print(
-                        f"Failed to delete existing playlist: {self.link_to_playlist}"
+                        f"Failed to delete existing playlist: {self.link_to_playlist}\n {e}"
                     )
                 finally:
                     self.link_to_playlist = ""
 
+        ctime = time.asctime(time.localtime())
+        playlist_description = f"முருகா ஶரணம். Playlist for practice. Created: {ctime}"
         response = playlists.create(
-            youtube, title=self.name, description="முருகா ஶரணம். Playlist for practice."
+            youtube, title=self.name, description=playlist_description
         )
-        playlist_id = response.get("id")
+        playlist_ids = response.get("id") if response else ""
         state += 1
         frappe.publish_progress(
             int(state * step),
             title="Updating Playlist",
             description="Empty Playlist created. Adding songs...",
-            doctype=self.doctype,
-            docname=self.name,
+            # doctype=self.doctype,
+            # docname=self.name,
         )
         time.sleep(1)
         for entry in self.song_list:
@@ -61,27 +65,30 @@ class ThiruppugazhAnbargalBhajan(Document):
                 int(state * step),
                 title="Updating Playlist",
                 description=f"Add to playlist: {entry.song}",
-                doctype=self.doctype,
-                docname=self.name,
+                # doctype=self.doctype,
+                # docname=self.name,
             )
+            time.sleep(1)
             if video_ids and len(video_ids) > 0:
-                playlists.insert_video(youtube, playlist_id, video_ids[0])
+                playlists.insert_video(youtube, playlist_ids, video_ids[0])
             state += 1
             frappe.publish_progress(
                 int(state * step),
                 title="Updating Playlist",
                 description=f"Successfully added {entry.song}!",
-                doctype=self.doctype,
-                docname=self.name,
+                # doctype=self.doctype,
+                # docname=self.name,
             )
+            time.sleep(1)
         frappe.publish_progress(
             100,
             title="Updating Playlist",
             description="Updating Bhajan with link to playlist",
-            doctype=self.doctype,
-            docname=self.name,
+            # doctype=self.doctype,
+            # docname=self.name,
         )
-        self.link_to_playlist = f"https://www.youtube.com/playlist?list={playlist_id}"
+        time.sleep(1)
+        self.link_to_playlist = f"https://www.youtube.com/playlist?list={playlist_ids}"
         self.save()
         frappe.msgprint(
             title="Success",
